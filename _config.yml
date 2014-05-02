@@ -1,0 +1,26 @@
+# head
+menu:
+  Home: /
+  Archives: /archives
+rss: /atom.xml
+favicon: /favicon.ico
+
+# main
+date_format: 'MMMM D, YYYY'
+excerpt_link: Read More
+comment_link: 评论
+
+# duoshuo评论
+duoshuo_short_name: 
+
+# cnzz统计id
+cnzz_id: 
+
+# foot
+themes_mata: ' ❤ Theme by <a href="http://riny.net" target="_blank">Bubblings</a> and <a href="http://unmric.com/" target="_blank">unmric</a>'
+google_analytics:
+
+# link
+links:
+  'Bubblings blog': 'http://riny.net'
+  '测试': 'http://baidu.com'
