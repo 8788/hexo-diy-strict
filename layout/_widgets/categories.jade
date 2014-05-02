@@ -1,0 +1,9 @@
+.widget.tags
+  .h categories
+  .b 
+     ul
+        - site.categories.sort('posts.length').reverse().forEach(function(item) {
+           li
+             a(href="#{config.root}#{item.path}") #{item.name}
+             small (#{item.posts.length})
+        - })

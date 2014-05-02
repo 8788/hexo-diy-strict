@@ -1,0 +1,12 @@
+include _views/post
+extends _views/main
+
+block main
+  +post(page, 'post')
+  if config.disqus_shortname && page.comments
+    div.comments
+      div.disqus_thread
+
+block head
+  title
+    = page.title + ' - ' + config.title

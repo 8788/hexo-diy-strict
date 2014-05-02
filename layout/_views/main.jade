@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    include head
+  body
+    header.site-head
+      .inner
+        h1.site-title.u-fl: a(href = config.root)
+          = config.title
+        include nav
+    section.site-content
+      main.site-main
+        block main
+      aside.site-aside
+        include aside
+    footer.site-foot
+      .inner
+        div.site-copy.u-fl
+          = '© ' + date(new Date(), 'YYYY') + ' ' + (config.author || config.title)
+          if theme.themes_mata
+            bdi
+              != theme.themes_mata
+        include menu
+    include foot
