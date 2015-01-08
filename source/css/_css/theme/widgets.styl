@@ -1,7 +1,7 @@
 .widget
   background-color: #fff
   margin-bottom: 20px
-  font-size: 14px
+  line-height: 1.6
 
   .h
     padding: 5px 10px
@@ -15,6 +15,38 @@
 .tags
   small
     margin-left: 5px
+
+
+.fixed
+  background: transparent
+
+.catalog
+  margin-bottom: 20px
+  padding: 5px
+  border: 1px solid #ccc
+  background-color: #fff
+  h2 
+    font-size: 15px
+    font-weight: bold
+    padding: 5px 
+
+  ul
+    margin: 0
+    list-style-type:square
+    list-style-position: inside
+
+  .catalog-list
+    padding: 0 5px
+
+    li
+      margin-bottom: 2px
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+
+    .sub-title
+      margin-left: 20px
+
 
 .about
   .info
@@ -49,6 +81,7 @@
           filter: grayscale(0)
           filter: none
           transition: none
+          opacity: 0.8
 
 	.weibo
 	  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjY5ODQxNEEyRDEwQjExRTNBNzk2QjNEMDIzNTlEREIwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjY5ODQxNEEzRDEwQjExRTNBNzk2QjNEMDIzNTlEREIwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Njk4NDE0QTBEMTBCMTFFM0E3OTZCM0QwMjM1OUREQjAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Njk4NDE0QTFEMTBCMTFFM0E3OTZCM0QwMjM1OUREQjAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7AaU98AAACmklEQVR42pyVbWiOURjH7+dxR6RmLCRkm1i+bB+8l7xlaZnlpbws7IOWIb6R4ouyffZSy9tE3j5gFpOyMOWDl5VGXjOL9ET4MNSIze+s/9FxO/fD81z165z73Odc1znXua7rJDoWTw/SyEhYDaUwEYZCAj7Bc2iBU/A2TkEixkAu7IfK4P/kPGyE99EfSc/kCviYgXIjy+AdrPqXgS1wUW7IRk7DjjgDK2Fvhgo74YZaK7WwPmpgDBzNULmZnw/z1I6Gu/p3WEHx28BuGJRG2Q/ojoxNgEPwFQ4qkqbBGeckfQbGQ1WMYnPZW2EEDIQTzr9Z2rnx+XLoheEK6++wFIqTihqfNGvBPsV9EDFgN3AbhsFraNW4PcUSY2CuR7k58iLoieYN3DQLIU+Jdh+qYRcUOZdvZE7oDAaO9Q0xp2oRVo7IPcbgC0hpPF9tQaidWHkoH1rJgRUwE/rDY7gnV3Q7kbgAFsIVGAyz9W9IGEmqbU7/AGxSv0fz7NxvytpGWCf31EAZfI4m2gf1H8FV9e9I+TUwm+inufZ0A+CCciClOlTvcWlXUlXRSJvazTBVUWGO/VP3VKr7aXAUlDn9Vo+BjqSios9faseqbVCG92p3tlK6pfmN0y/0GLhlDDQ5VdQWrEDJlav+OXigfrnaJyrpgapAjcdAozHw1EmMS1JUrgV1UAJnYY1KcolOPdnJk2bVIleMrjb74BTKUKgwnKFdbdeYCb1J8Ax2KoMDlYN6ZXxUiqE91MdLZaPx+xQVtya564tCr1OKi1R/KvWk+sS8K+2BdmflmBbUOndSkcWjs8e5m79etDr5OluplgvTvsknYRRczkCxqU/j9ND8IWHMgpQiqQDWwnz1c1QuuuAVXIfjKnRe+SXAAO4NkZI1iOAIAAAAAElFTkSuQmCC") no-repeat 0 0;

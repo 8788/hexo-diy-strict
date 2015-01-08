@@ -1,3 +1,7 @@
-include ../_widgets/about
-include ../_widgets/categories
-include ../_widgets/links
+- if (page.layout == 'post')
+    include ../_widgets/categories
+    include ../_widgets/catalog
+- else 
+    include ../_widgets/about
+    include ../_widgets/categories
+    include ../_widgets/links
