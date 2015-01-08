@@ -8,12 +8,12 @@
   margin: 20px 60px
 
 .post__time
-  font-size: 12px
+  font-size: 14px
   color: #ccc
 
 .post__title
   margin-top: 5px
-  font-size: 20px
+  font-size: 1.45em
   a
     color: #666
     &:hover
@@ -37,26 +37,29 @@
       margin: 0.7em 0
       text-indent: 0
   code
-    border: 1px solid #DDD;
+    // border: 1px solid #DDD;
     background-color: #F8F8F8;
     border-radius: 3px;
-    padding: 0 3px
+    margin: 0 3px;
+    padding: 1px 3px
   pre
     display: block
     padding: 0.8em 1em
     margin: 0 0.1em
-    font-size: 13px
-    line-height: 1.4
+    font-size: 14px
+    line-height: 1.45
     text-shadow: 0 1px 0 #fff
     background-color: #F8F8F8;
     border: 1px solid #DDD;
     border-radius: 3px
     overflow-x: auto
     overflow-y: visible
-
     code
+      margin: 0
+      padding: 0
       border: 0
       background: none
+
   kbd
     @extend .post__main pre
     box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset
@@ -87,16 +90,22 @@
     table tr
       border-bottom: none
   h1 
-    font-size:138.5%
+    font-size:1.45em
+    font-weight: normal
   h2 
-    font-size:123.1%
+    font-size:1.35em
+    border-bottom: 1px solid #ddd
+    padding-top: 15px
+    padding-bottom: 10px
   h3 
-    font-size:108%
+    font-size:1.25em
+  h4, h5, h6
+    font-size:1.1em
   h1, h2, h3, h4, h5, h6, p
-    margin:1.3em 0
-  h1, h2, h3, h4, h5, h6, strong
-    font-weight:bold
-    font-family: "Segoe UI";
+    margin:1.25em 0
+  h1, h2, h3, h4, h5, h6
+    font-weight: bold
+    font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Microsoft Yahei";
   abbr, acronym
     border-bottom:1px dotted #000
     cursor:help
@@ -131,9 +140,7 @@
   table thead
     background: #eee
   p
-    font-size: 14px
     text-indent: 28px;
-    line-height: 24px
   ol, ul, dl
     margin: 15px 0
     margin-left:2em
@@ -192,6 +199,7 @@
     .keyword
     .javascript .function
       color: $highlight-purple
+      font-weight: bold
 
 .post__foot
   padding: 10px
@@ -201,7 +209,6 @@
 
 .post__foot-link
   padding: 10px
-  font-size: 12px
   color: #999
 
 .post__tag__item

@@ -9,7 +9,7 @@ mixin post(post,index)
       div.post__main
         if post.img
           a.post__image(href = config.root + post.path): img(src = post.img, alt = 'featured-image')
-        if post.excerpt && index == 'index'
+        if post.excerpt && index != 'post'
           != post.excerpt
         else
           != post.content

@@ -3,9 +3,9 @@ extends _views/main
 
 block main
   +post(page, 'post')
-  if config.disqus_shortname && page.comments
+  if theme.duoshuo_short_name && page.comments
     div.comments#comments
-      div.ds-thread
+      div.ds-thread(data-thread-key=page.path, data-url=page.permalink)
         if theme.duoshuo_short_name
 
            <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
@@ -23,3 +23,4 @@ block main
 block head
   title
     = page.title + ' - ' + config.title
+  meta(name="description", content=page.title)

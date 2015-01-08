@@ -1,12 +1,25 @@
-include _views/post
-extends _views/main
+- if (page.layout == 'page')
+    include _views/post
+    extends _views/main
 
-block main
-  +post(page, 'post')
-  if config.disqus_shortname && page.comments
-    div.comments
-      div.disqus_thread
+    block main
+      +post(page, 'post')
+      if theme.duoshuo_short_name && page.comments
+        div.comments
+          div.ds-thread(data-thread-key=page.dsThreadKey)
+            if theme.duoshuo_short_name
 
-block head
-  title
-    = page.title + ' - ' + config.title
+               <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+               script.
+                 var duoshuoQuery = {short_name:"#{theme.duoshuo_short_name}"};
+                 (function() {
+                   var ds = document.createElement('script');
+                   ds.type = 'text/javascript';ds.async = true;
+                   ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                   ds.charset = 'UTF-8';
+                   document.getElementsByTagName('body')[0].appendChild(ds);
+                 })();
+               <!-- 多说公共JS代码 end -->
+    block head
+      title
+        = page.title + ' - ' + config.title
