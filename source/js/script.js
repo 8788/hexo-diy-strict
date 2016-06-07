@@ -1,5 +1,5 @@
 /**
- * @fileOverview 
+ * @fileOverview
  * @authors Bubblings
  */
 
@@ -18,7 +18,7 @@
 			backTop.style.display = 'block';
 		} else {
 			backTop.style.display = 'none';
-		}		
+		}
 	}
 
 
@@ -40,11 +40,12 @@
 	for (var i = 0; i < len; i++) {
 		var cur = titles[i];
 		if (cur.tagName.toLowerCase() === 'h2') {
-			res += '<li><a href="#' + cur.id + '">' + cur.innerHTML + '</a></li>';
+			// res += '<li><a href="#' + cur.id + '">' + cur.innerHTML + '</a></li>';
+			res += '<li><a href="#' + cur.id + '">' + cur.innerText + '</a></li>';
 		} else {
-			res += '<li class="sub-title"><a href="#' + cur.id + '">' + cur.innerHTML + '</a></li>';
+			// res += '<li class="sub-title"><a href="#' + cur.id + '">' + cur.innerHTML + '</a></li>';
+			res += '<li class="sub-title"><a href="#' + cur.id + '">' + cur.innerText + '</a></li>';
 		}
-		
 	}
 	catalogList.innerHTML = res;
 
